@@ -11,6 +11,7 @@
 	border: 1px solid black;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 0.5em;
 }
 .word-grid > * {
 	padding: 0.5em;

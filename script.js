@@ -64,3 +64,24 @@ function renderWords() {
 		// wordGrid.append(eng)
 	})
 }
+
+// Sortera de svenska orden i bokstavsordning
+const sortButton = document.querySelector('#sort-swe')
+
+sortButton.addEventListener('click', () => {
+	wordList.sort((a, b) => {
+		// a och b är word-objekt: { sv, en }
+		if( a.sv < b.sv ) {
+			return -1  // a ska visas först
+		} else if( a.sv > b.sv ) {
+			return 1
+		} else {
+			return 0
+		}
+		// "conditional operator" kan användas för att förkorta koden: ?
+	})
+	renderWords()
+	console.log('Nu är det sorterat... eller?')
+})
+
+// TODO: lägg till en button för att sortera efter de engelska orden!
